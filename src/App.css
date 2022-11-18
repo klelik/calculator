@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+.App {
+  text-align: center;
+  background-color: #282c34;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+
+
+}
+
+.calculator{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 100px;
+  background-color: black;
+  border: solid black 10px;
+  border-radius: 5px;
+}
+
+.calculator > * {
+  border: solid black;
+  padding: 15px;
+}
+
+.row{
+  grid-column: 1/-1;
+}
+
+#display{
+  min-height: 20px;
+  font-size: 20px;
+  color: orange;
+  text-align: right;
+  background-color: wheat;
+  border-radius: 5px;
+
+}
+
+.numpad{
+  background-color: rgb(161, 159, 159);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+#clear{
+  background-color: rgb(92, 177, 177);
+  
+}
+
+#equals{
+  background-color: rgb(92, 177, 177);
+}
+
+#add{
+  color:rgb(76, 110, 110);
+}
+#multiply{
+  color:rgb(76, 110, 110);}
+#divide{
+  color:rgb(76, 110, 110);}
+#subtract{
+  color:rgb(76, 110, 110);}
+#zero{background-color: wheat;}
