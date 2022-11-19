@@ -52,31 +52,21 @@ function App() {
 
   const  handleEqual = () => {
 
-              /* toFixed so we can cut the decimals to 0.123456  */ 
-
-
     function evalSimilar(str) {
       return Function(`'use strict'; return (${str})`)()
     }   
+    const result= evalSimilar(display);    /*calling evalSimmilar so it can procces the display string in the {display } and return the result  */
+         
+    if (result.toString().length < 5) {  /* toFixed so we can cut the decimals to 0.123456  */  
 
-    const result= evalSimilar(display);             /*calling evalSimmilar so it can procces the display string in the {display } and return the result  */
-    console.log("RESULT = " +result);
-    console.log("RESULT LENGTH= " +result.toString().length);
-
-
-    if (result.toString().length < 5) {
      const trimmed1 = result.toFixed(2) 
-    console.log("trimmed 1 = " +trimmed1);
      setDisplay(trimmed1)
-    }else{
-      const trimmed2 = result.toFixed(7) 
-    console.log("trimmed 2 = " +trimmed2);
-
-      setDisplay(trimmed2)
-
-    }
     
+    }else{
 
+      const trimmed2 = result.toFixed(7) 
+      setDisplay(trimmed2)
+    }
   }
 
   return (
